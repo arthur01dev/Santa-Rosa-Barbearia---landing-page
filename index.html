@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santa Rosa Barbearia – Uberlândia-MG</title>
+  <meta name="description"
+    content="Santa Rosa Barbearia em Uberlândia-MG. Cortes, barba e atendimento premium. Agende pelo WhatsApp." />
+  <meta property="og:title" content="Santa Rosa Barbearia" />
+  <meta property="og:description" content="Estilo é um reflexo da sua atitude e sua personalidade. Uberlândia-MG." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#FF5C00" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Navegação principal">
+    <div class="container navbar__inner">
+      <a href="#" class="navbar__logo" aria-label="Santa Rosa Barbearia – início">
+        <img src="image/logo-neon-removebg.png" alt="Santa Rosa Barbearia">
+        <!-- <span class="navbar__logo-fallback" style="display:none">SANTA ROSA</span> -->
+      </a>
+
+      <ul class="navbar__nav" role="list">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#equipe">Equipe</a></li>
+        <li><a href="#localizacao">Localização</a></li>
+      </ul>
+
+      <div class="navbar__cta">
+        <a href="https://wa.me/5534998959585" target="_blank" rel="noopener" class="btn btn-primary">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i>
+          Agendar horário
+        </a>
+      </div>
+
+      <button class="navbar__hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <!-- <span></span><span></span><span></span> -->
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile overlay + drawer -->
+  <div class="navbar__overlay" id="overlay" aria-hidden="true"></div>
+  <nav class="navbar__drawer" id="drawer" aria-label="Menu mobile">
+    <a href="#sobre" class="drawer-link">Sobre</a>
+    <a href="#servicos" class="drawer-link">Serviços</a>
+    <a href="#equipe" class="drawer-link">Equipe</a>
+    <a href="#localizacao" class="drawer-link">Localização</a>
+    <a href="https://wa.me/5534998959585" target="_blank" rel="noopener" class="btn btn-primary">
+      <i class="fab fa-whatsapp" aria-hidden="true"></i>
+      Agendar horário
+    </a>
+  </nav>
+
+  <main>
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="hero" aria-label="Apresentação">
+      <div class="hero__bg" role="img" aria-label="Barbeiro profissional em ação"></div>
+      <div class="hero__overlay"></div>
+      <div class="hero__noise"></div>
+
+      <div class="container">
+        <div class="hero__content">
+          <div class="hero__badge">
+            <i class="fas fa-scissors" aria-hidden="true"></i>
+            Uberlândia · MG
+          </div>
+
+          <h1 class="hero__title">
+            ESTILO É UM<br>
+            REFLEXO DA<br>
+            <span>SUA ATITUDE.</span>
+          </h1>
+
+          <p class="hero__sub">
+            Cortes que combinam com quem você é. Atendimento premium no coração de Uberlândia.
+          </p>
+
+          <div class="hero__ctas">
+            <a href="https://wa.me/5534998959585" target="_blank" rel="noopener" class="btn btn-primary">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i>
+              Agendar pelo WhatsApp
+            </a>
+            <a href="#servicos" class="btn btn-ghost">
+              Ver serviços
+              <i class="fas fa-arrow-down" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <div class="hero__stats">
+            <div class="hero__stat"><strong>5 barbeiros</strong>&nbsp;especializados</div>
+            <div class="hero__stat-divider"></div>
+            <div class="hero__stat"><strong>+5 anos</strong>&nbsp;de experiência</div>
+            <div class="hero__stat-divider"></div>
+            <div class="hero__stat"><strong>Uberlândia-MG</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span>Rolar</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </section>
+
+    <!-- ═══════════ SOBRE ═══════════ -->
+    <section class="sobre" id="sobre" aria-labelledby="sobre-titulo">
+      <div class="container">
+        <div class="sobre__grid">
+
+          <div class="sobre__image-wrap" data-aos="fade-right" data-aos-duration="700">
+            <img src="image/Foto-barbeiro-gemini.png" alt="Interior da Santa Rosa Barbearia em Uberlândia"
+              class="sobre__img" onerror="this.style.background='#181818'" />
+            <div class="sobre__image-accent" aria-hidden="true"></div>
+            <div class="sobre__image-badge" aria-hidden="true">✂ Santa Rosa</div>
+          </div>
+
+          <div class="sobre__content" data-aos="fade-left" data-aos-duration="700" data-aos-delay="100">
+            <span class="section-label">Conheça-nos</span>
+            <h2 class="section-title" id="sobre-titulo" style="font-size:48px">Nossa História</h2>
+            <div class="accent-line"></div>
+            <p class="sobre__text">
+              A Santa Rosa Barbearia nasceu com um propósito claro: oferecer um espaço onde estilo, técnica e respeito
+              se encontram. Localizada no coração do bairro Santa Rosa, em Uberlândia-MG, nossa barbearia foi construída
+              para homens que valorizam sua aparência e buscam um atendimento à altura do seu padrão.
+            </p>
+            <p class="sobre__text" style="margin-top:-16px">
+              Cada corte, cada detalhe na barba, cada minuto do seu atendimento reflete o compromisso da nossa equipe
+              com a excelência. Aqui, você não é apenas um cliente — você é parte da nossa história.
+            </p>
+
+            <div class="sobre__highlights">
+              <div class="sobre__highlight" data-aos="fade-up" data-aos-delay="200">
+                <span class="sobre__highlight-icon">✂</span>
+                <span class="sobre__highlight-label">Técnicas modernas</span>
+              </div>
+              <div class="sobre__highlight" data-aos="fade-up" data-aos-delay="300">
+                <span class="sobre__highlight-icon">💈</span>
+                <span class="sobre__highlight-label">Atendimento premium</span>
+              </div>
+              <div class="sobre__highlight" data-aos="fade-up" data-aos-delay="400">
+                <span class="sobre__highlight-icon">⭐</span>
+                <span class="sobre__highlight-label">Clientes satisfeitos</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ SERVIÇOS ═══════════ -->
+    <section class="servicos" id="servicos" aria-labelledby="servicos-titulo">
+      <div class="container">
+        <div class="servicos__header" data-aos="fade-up">
+          <span class="section-label">O QUE OFERECEMOS</span>
+          <h2 class="section-title" id="servicos-titulo">Transforme Seu Visual</h2>
+        </div>
+
+        <div class="servicos__grid">
+
+          <article class="servico-card" data-aos="fade-up" data-aos-delay="0">
+            <img src="image/corte-de-cabelo.png" alt="Serviço de corte de cabelo na Santa Rosa Barbearia"
+              class="servico-card__img" onerror="this.style.background='#181818'" />
+            <div class="servico-card__content">
+              <h3 class="servico-card__name">Corte de Cabelo</h3>
+              <p class="servico-card__desc">Degradê, tesoura, navalhado. Cortamos de acordo com o formato do seu rosto e
+                o seu estilo de vida.</p>
+              <a href="https://wa.me/5534998959585" target="_blank" rel="noopener" class="servico-card__cta"
+                aria-label="Agendar corte de cabelo pelo WhatsApp">
+                Agendar <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="servico-card" data-aos="fade-up" data-aos-delay="100">
+            <img src="image/barba.png" alt="Serviço de corte e barba na Santa Rosa Barbearia" class="servico-card__img"
+              onerror="this.style.background='#181818'" />
+            <div class="servico-card__content">
+              <h3 class="servico-card__name">Corte e Barba</h3>
+              <p class="servico-card__desc">O combo perfeito. Saia com um visual completo, do cabelo à barba, executado
+                com precisão e cuidado.</p>
+              <a href="https://wa.me/5534998959585" target="_blank" rel="noopener" class="servico-card__cta"
+                aria-label="Agendar corte e barba pelo WhatsApp">
+                Agendar <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="servico-card" data-aos="fade-up" data-aos-delay="200">
+            <img src="image/barba-terapia.png" alt="Serviço de barba terapia na Santa Rosa Barbearia"
+              class="servico-card__img" onerror="this.style.background='#181818'" />
+            <div class="servico-card__content">
+              <h3 class="servico-card__name">Barba Terapia</h3>
+              <p class="servico-card__desc">Hidratação profunda, vapor quente e técnicas especializadas para uma barba
+                saudável, macia e impecável.</p>
+              <a href="https://wa.me/5534998959585" target="_blank" rel="noopener" class="servico-card__cta"
+                aria-label="Agendar barba terapia pelo WhatsApp">
+                Agendar <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="servicos__footer" data-aos="fade-up" data-aos-delay="300">
+          <a href="https://wa.me/5534998959585" target="_blank" rel="noopener" class="btn btn-ghost">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            Ver todos os serviços
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ EQUIPE ═══════════ -->
+    <section class="equipe" id="equipe" aria-labelledby="equipe-titulo">
+      <div class="container">
+        <div class="equipe__header" data-aos="fade-up">
+          <span class="section-label">NOSSA EQUIPE</span>
+          <h2 class="section-title" id="equipe-titulo">Os Especialistas</h2>
+        </div>
+
+        <div class="equipe__grid">
+
+          <article class="membro-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="membro-card__foto-wrap">
+              <img src="image/luiz.jpg" alt="Luiz, barbeiro especialista da Santa Rosa Barbearia"
+                class="membro-card__foto" onerror="this.src='';this.style.background='#2a2a2a'" />
+            </div>
+            <div class="membro-card__nome">Luiz</div>
+            <div class="membro-card__cargo">Barbeiro Especialista</div>
+          </article>
+
+          <article class="membro-card" data-aos="fade-up" data-aos-delay="80">
+            <div class="membro-card__foto-wrap">
+              <img src="image/anderson.jpg" alt="Anderson, barbeiro especialista da Santa Rosa Barbearia"
+                class="membro-card__foto" onerror="this.src='';this.style.background='#2a2a2a'" />
+            </div>
+            <div class="membro-card__nome">Anderson</div>
+            <div class="membro-card__cargo">Barbeiro Especialista</div>
+          </article>
+
+          <article class="membro-card" data-aos="fade-up" data-aos-delay="160">
+            <div class="membro-card__foto-wrap">
+              <img src="image/joao.jpg" alt="João Fillipe, barbeiro especialista da Santa Rosa Barbearia"
+                class="membro-card__foto" onerror="this.src='';this.style.background='#2a2a2a'" />
+            </div>
+            <div class="membro-card__nome">João Fillipe</div>
+            <div class="membro-card__cargo">Barbeiro Especialista</div>
+          </article>
+
+          <article class="membro-card" data-aos="fade-up" data-aos-delay="240">
+            <div class="membro-card__foto-wrap">
+              <img src="image/roberto.jpg" alt="Roberto, barbeiro especialista da Santa Rosa Barbearia"
+                class="membro-card__foto" onerror="this.src='';this.style.background='#2a2a2a'" />
+            </div>
+            <div class="membro-card__nome">Roberto</div>
+            <div class="membro-card__cargo">Barbeiro Especialista</div>
+          </article>
+
+          <article class="membro-card" data-aos="fade-up" data-aos-delay="320">
+            <div class="membro-card__foto-wrap">
+              <img src="image/julio2.jpg" alt="Lamarque, barbeiro especialista da Santa Rosa Barbearia"
+                class="membro-card__foto" onerror="this.src='';this.style.background='#2a2a2a'" />
+            </div>
+            <div class="membro-card__nome">Lamarque</div>
+            <div class="membro-card__cargo">Barbeiro Especialista</div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ LOCALIZAÇÃO ═══════════ -->
+    <section class="localizacao" id="localizacao" aria-labelledby="localizacao-titulo">
+      <div class="container">
+        <div class="localizacao__grid">
+
+          <div data-aos="fade-right" data-aos-duration="700">
+            <span class="section-label localizacao__label">NOS ENCONTRE</span>
+            <h2 class="localizacao__title" id="localizacao-titulo">Venha Nos Visitar</h2>
+
+            <div class="localizacao__address">
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              <span>R. Rondônia, 25 – Santa Rosa,<br>Uberlândia – MG, Brasil</span>
+            </div>
+
+            <div class="localizacao__hours" aria-label="Horários de funcionamento">
+              <div class="horario-pill">
+                <i class="fas fa-clock" aria-hidden="true"></i>
+                <strong>Seg – Sex</strong>
+                <span>9h às 20h</span>
+              </div>
+              <div class="horario-pill">
+                <i class="fas fa-clock" aria-hidden="true"></i>
+                <strong>Sábado</strong>
+                <span>8h às 18h</span>
+              </div>
+              <div class="horario-pill fechado">
+                <i class="fas fa-times-circle" aria-hidden="true"></i>
+                <strong>Domingo</strong>
+                <span>Fechado</span>
+              </div>
+            </div>
+
+            <a href="https://wa.me/5534998959585" target="_blank" rel="noopener" class="btn btn-primary">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i>
+              Agendar horário
+            </a>
+
+            <div class="localizacao__social">
+              <a href="https://www.instagram.com/santarosabarbearia/" target="_blank" rel="noopener" class="social-link"
+                aria-label="Siga no Instagram">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+                Instagram
+              </a>
+              <a href="https://wa.me/5534998959585" target="_blank" rel="noopener" class="social-link"
+                aria-label="Contato pelo WhatsApp">
+                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <div class="localizacao__map" data-aos="fade-left" data-aos-duration="700" data-aos-delay="100">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.8796487886884!2d-48.2764167!3d-18.8924196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a4450070bee9ed%3A0x9606d1bc127c1f83!2sSanta%20Rosa%20Barbearia!5e0!3m2!1spt-BR!2sbr!4v1774674449687!5m2!1spt-BR!2sbr"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__logo">
+          <a href="#" aria-label="Santa Rosa Barbearia – topo da página">
+            <img src="assets/LOGO_SEM_FUNDO_LARANJA.png" alt="Santa Rosa Barbearia"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+            <span class="footer__logo-fallback" style="display:none">SANTA ROSA</span>
+          </a>
+          <p>Estilo é um reflexo da sua atitude e sua personalidade.</p>
+        </div>
+
+        <ul class="footer__links" role="list">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#equipe">Equipe</a></li>
+          <li><a href="#localizacao">Localização</a></li>
+        </ul>
+
+        <div class="footer__social" aria-label="Redes sociais">
+          <a href="https://www.instagram.com/santarosabarbearia/" target="_blank" rel="noopener"
+            class="footer__social-icon" aria-label="Instagram da Santa Rosa Barbearia">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="https://wa.me/5534998959585" target="_blank" rel="noopener" class="footer__social-icon"
+            aria-label="WhatsApp da Santa Rosa Barbearia">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">
+          © 2025 Santa Rosa Barbearia · CNPJ 51.158.800/0001-76 · R. Rondônia, 25 – Santa Rosa, Uberlândia-MG
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════ WHATSAPP FLOAT ═══════════ -->
+  <div class="wa-float">
+    <span class="wa-float__tooltip">Agendar agora</span>
+    <a href="https://wa.me/5534998959585" target="_blank" rel="noopener" class="wa-float__btn"
+      aria-label="Agendar horário pelo WhatsApp">
+      <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <!-- ═══════════ SCRIPTS ═══════════ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
