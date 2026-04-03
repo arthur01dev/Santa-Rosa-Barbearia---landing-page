@@ -23,17 +23,14 @@
     rel="stylesheet" />
 
   <!-- PERFORMANCE: Font Awesome carregado de forma não-bloqueante -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    media="print"
-    onload="this.media='all'"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print"
+    onload="this.media='all'" />
   <noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   </noscript>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" /> -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" media="print" onload="this.media='all'" />
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -89,18 +86,9 @@
 
       <!-- VIDEO BACKGROUND -->
       <div class="hero__video-wrap" aria-hidden="true">
-        <video
-          class="hero__video"
-          src="movie/video.mp4"
-          autoplay
-          loop
-          muted
-          playsinline
-          preload="metadata"
-          fetchpriority="low"
-          poster="image/Foto-barbeiro-gemini.png"
-        >
-          <img src="image/Foto-barbeiro-gemini.png" alt="Barbeiro profissional em ação" />
+        <video id="heroVideo" class="hero__video" src="movie/video_web.mp4" autoplay loop muted playsinline preload="metadata"
+          fetchpriority="low">
+
         </video>
       </div>
       <!-- /VIDEO BACKGROUND -->
@@ -216,7 +204,8 @@
               class="servico-card__img" loading="lazy" onerror="this.style.background='#181818'" />
             <div class="servico-card__content">
               <h3 class="servico-card__name">Corte de Cabelo</h3>
-              <p class="servico-card__desc">Degradê, tesoura, navalhado. Cortamos de acordo com o formato do seu rosto e o seu estilo de vida.</p>
+              <p class="servico-card__desc">Degradê, tesoura, navalhado. Cortamos de acordo com o formato do seu rosto e
+                o seu estilo de vida.</p>
               <a href="https://wa.me/5534998959585" target="_blank" rel="noopener" class="servico-card__cta"
                 aria-label="Agendar corte de cabelo pelo WhatsApp">
                 Agendar <i class="fas fa-arrow-right" aria-hidden="true"></i>
@@ -225,11 +214,12 @@
           </article>
 
           <article class="servico-card" data-aos="fade-up" data-aos-delay="100">
-            <img src="image/barba.png" alt="Serviço de corte e barba na Santa Rosa Barbearia"
-              class="servico-card__img" loading="lazy" onerror="this.style.background='#181818'" />
+            <img src="image/barba.png" alt="Serviço de corte e barba na Santa Rosa Barbearia" class="servico-card__img"
+              loading="lazy" onerror="this.style.background='#181818'" />
             <div class="servico-card__content">
               <h3 class="servico-card__name">Corte e Barba</h3>
-              <p class="servico-card__desc">O combo perfeito. Saia com um visual completo, do cabelo à barba, executado com precisão e cuidado.</p>
+              <p class="servico-card__desc">O combo perfeito. Saia com um visual completo, do cabelo à barba, executado
+                com precisão e cuidado.</p>
               <a href="https://wa.me/5534998959585" target="_blank" rel="noopener" class="servico-card__cta"
                 aria-label="Agendar corte e barba pelo WhatsApp">
                 Agendar <i class="fas fa-arrow-right" aria-hidden="true"></i>
@@ -242,7 +232,8 @@
               class="servico-card__img" loading="lazy" onerror="this.style.background='#181818'" />
             <div class="servico-card__content">
               <h3 class="servico-card__name">Barba Terapia</h3>
-              <p class="servico-card__desc">Hidratação profunda, vapor quente e técnicas especializadas para uma barba saudável, macia e impecável.</p>
+              <p class="servico-card__desc">Hidratação profunda, vapor quente e técnicas especializadas para uma barba
+                saudável, macia e impecável.</p>
               <a href="https://wa.me/5534998959585" target="_blank" rel="noopener" class="servico-card__cta"
                 aria-label="Agendar barba terapia pelo WhatsApp">
                 Agendar <i class="fas fa-arrow-right" aria-hidden="true"></i>
@@ -374,9 +365,7 @@
           <div class="localizacao__map" data-aos="fade-left" data-aos-duration="700" data-aos-delay="100">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.8796487886884!2d-48.2764167!3d-18.8924196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a4450070bee9ed%3A0x9606d1bc127c1f83!2sSanta%20Rosa%20Barbearia!5e0!3m2!1spt-BR!2sbr!4v1774674449687!5m2!1spt-BR!2sbr"
-              title="Localização da Santa Rosa Barbearia"
-              allowfullscreen
-              loading="lazy"
+              title="Localização da Santa Rosa Barbearia" allowfullscreen loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
@@ -438,7 +427,7 @@
   </div>
 
   <!-- ═══════════ SCRIPTS ═══════════ -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
   <script src="js/script.js"></script>
 </body>
 

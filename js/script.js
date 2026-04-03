@@ -1,8 +1,17 @@
 // PERFORMANCE: once: true — animação roda uma vez e para de monitorar o elemento
-AOS.init({
-  duration: 650,
-  easing: 'ease-out-cubic',
-  offset: 60
+// AOS.init({
+//   duration: 650,
+//   easing: 'ease-out-cubic',
+//   offset: 60
+// });
+
+// Troque a linha AOS.init({ ... }) por:
+document.addEventListener('DOMContentLoaded', () => {
+  AOS.init({
+    duration: 650,
+    easing: 'ease-out-cubic',
+    offset: 60
+  });
 });
 
 // Navbar scroll shadow
@@ -55,3 +64,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     window.scrollTo({ top, behavior: 'smooth' });
   });
 });
+
+const heroVideo = document.getElementById('heroVideo');
+if (heroVideo) {
+  heroVideo.muted = true;
+  heroVideo.play().catch(() => {
+    // Silencia o erro caso o browser ainda bloqueie
+  });
+}
