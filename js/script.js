@@ -1,11 +1,4 @@
 // PERFORMANCE: once: true — animação roda uma vez e para de monitorar o elemento
-// AOS.init({
-//   duration: 650,
-//   easing: 'ease-out-cubic',
-//   offset: 60
-// });
-
-// Troque a linha AOS.init({ ... }) por:
 document.addEventListener('DOMContentLoaded', () => {
   AOS.init({
     duration: 650,
@@ -68,7 +61,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const heroVideo = document.getElementById('heroVideo');
 if (heroVideo) {
   heroVideo.muted = true;
-  heroVideo.play().catch(() => {
-    // Silencia o erro caso o browser ainda bloqueie
+  heroVideo.play().then(() => {
+    heroVideo.classList.add('playing');
+  }).catch(() => {
+    // Autoplay bloqueado: vídeo permanece opacity 0
+    // A imagem de fallback já está visível por baixo
   });
 }
