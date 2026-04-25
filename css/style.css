@@ -746,10 +746,10 @@ a {
   margin-bottom: 64px;
 }
 
-/* Desktop: 5 colunas */
+/* Desktop: 4 colunas */
 .equipe__grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   justify-items: center;
 }
@@ -1154,31 +1154,18 @@ a {
     gap: 48px;
   }
 
-  /* Tablet: linha 1 → 3 cards, linha 2 → 2 cards centralizados */
+  /* Tablet: 2 cards por linha */
   .equipe__grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
 
-  .equipe__grid .membro-card-link:nth-child(1) {
-    grid-column: 1 / 3;
-  }
-
-  .equipe__grid .membro-card-link:nth-child(2) {
-    grid-column: 3 / 5;
-  }
-
-  .equipe__grid .membro-card-link:nth-child(3) {
-    grid-column: 5 / 7;
-  }
-
+  .equipe__grid .membro-card-link:nth-child(1),
+  .equipe__grid .membro-card-link:nth-child(2),
+  .equipe__grid .membro-card-link:nth-child(3),
   .equipe__grid .membro-card-link:nth-child(4) {
-    grid-column: 2 / 4;
-  }
-
-  .equipe__grid .membro-card-link:nth-child(5) {
-    grid-column: 4 / 6;
+    grid-column: auto;
   }
 }
 
@@ -1256,31 +1243,18 @@ a {
     grid-template-columns: 1fr;
   }
 
-  /* Mobile equipe: triângulo 2 + 2 + 1 */
+  /* Mobile equipe: 1 card por linha */
   .equipe__grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
     gap: 16px;
   }
 
-  .equipe__grid .membro-card-link:nth-child(1) {
-    grid-column: 1 / 3;
-  }
-
-  .equipe__grid .membro-card-link:nth-child(2) {
-    grid-column: 3 / 5;
-  }
-
-  .equipe__grid .membro-card-link:nth-child(3) {
-    grid-column: 1 / 3;
-  }
-
+  .equipe__grid .membro-card-link:nth-child(1),
+  .equipe__grid .membro-card-link:nth-child(2),
+  .equipe__grid .membro-card-link:nth-child(3),
   .equipe__grid .membro-card-link:nth-child(4) {
-    grid-column: 3 / 5;
-  }
-
-  .equipe__grid .membro-card-link:nth-child(5) {
-    grid-column: 2 / 4;
+    grid-column: auto;
   }
 
   .localizacao__grid {
@@ -1345,7 +1319,7 @@ a {
   }
 
   .equipe__grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
     gap: 12px;
   }
 
