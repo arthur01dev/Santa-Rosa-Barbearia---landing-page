@@ -28,8 +28,10 @@
   --navbar-height: 92px;
 }
 
+/* ── FIX OVERFLOW HORIZONTAL ── */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -40,6 +42,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  max-width: 100vw;
 }
 
 ::selection {
@@ -170,7 +173,6 @@ a {
   height: var(--navbar-height);
 }
 
-/* FIX 1: logo com altura controlada e máximo responsivo */
 .navbar__logo img {
   height: 70px;
   width: auto;
@@ -234,7 +236,6 @@ a {
   gap: 16px;
 }
 
-/* FIX 3: hambúrguer — display: none no desktop, flex no mobile via media query */
 .navbar__hamburger {
   display: none;
   flex-direction: column;
@@ -380,10 +381,6 @@ a {
   display: none !important;
 }
 
-.hero__video::--webkit-media-controls-panel {
-  display: none !important;
-}
-
 .hero__overlay {
   position: absolute;
   inset: 0;
@@ -400,14 +397,12 @@ a {
   z-index: 1;
 }
 
-/* FIX 2: padding-top igual à altura da navbar + folga visual */
 .hero__content {
   position: relative;
   z-index: 2;
   max-width: 720px;
   padding-top: calc(var(--navbar-height) + 24px);
   padding-bottom: 80px;
-  /* espaço para o .hero__scroll não sobrepor */
 }
 
 .hero__badge {
@@ -430,7 +425,6 @@ a {
     opacity: 0;
     transform: translateY(8px) scale(0.95);
   }
-
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -460,7 +454,6 @@ a {
     opacity: 0;
     transform: translateY(32px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -520,7 +513,6 @@ a {
   align-self: center;
 }
 
-/* FIX 4: scroll indicator — pointer-events none para não bloquear cliques */
 .hero__scroll {
   position: absolute;
   bottom: 40px;
@@ -545,15 +537,8 @@ a {
 }
 
 @keyframes bounce {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(6px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(6px); }
 }
 
 /* ════════════════════════
@@ -573,6 +558,8 @@ a {
 
 .sobre__image-wrap {
   position: relative;
+  /* Contém o badge negativo sem vazar para fora */
+  overflow: visible;
 }
 
 .sobre__img {
@@ -608,6 +595,8 @@ a {
   letter-spacing: 0.05em;
   box-shadow: var(--shadow-accent);
   white-space: nowrap;
+  /* ── FIX: evita que o badge extrapole a viewport ── */
+  max-width: calc(100% + 20px);
 }
 
 .sobre__text {
@@ -746,12 +735,14 @@ a {
   margin-bottom: 64px;
 }
 
-/* Desktop: 4 colunas */
+/* ── Desktop: 3 colunas, centralizado ── */
 .equipe__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   justify-items: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .membro-card {
@@ -1081,15 +1072,8 @@ a {
 }
 
 @keyframes waPulse {
-
-  0%,
-  100% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.05);
-  }
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.05); }
 }
 
 .wa-float__tooltip {
@@ -1154,41 +1138,37 @@ a {
     gap: 48px;
   }
 
-  /* Tablet: 2 cards por linha */
+  /* Tablet equipe: 3 colunas mantidas (3 membros cabem bem) */
   .equipe__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 100%;
   }
+}
 
-  .equipe__grid .membro-card-link:nth-child(1),
-  .equipe__grid .membro-card-link:nth-child(2),
-  .equipe__grid .membro-card-link:nth-child(3),
-  .equipe__grid .membro-card-link:nth-child(4) {
-    grid-column: auto;
+/* ── TABLET MÉDIO: 860px ── */
+@media (max-width: 860px) {
+  /* Equipe passa para 2 colunas em tablets menores */
+  .equipe__grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 560px;
   }
 }
 
 /* ── MOBILE: 768px ── */
 @media (max-width: 768px) {
-
-  /* Reduz altura da navbar e atualiza a variável */
   :root {
     --navbar-height: 68px;
   }
 
-  /* Oculta nav desktop e CTA */
   .navbar__nav,
   .navbar__cta {
     display: none;
   }
 
-  /* FIX 3: exibe hambúrguer */
   .navbar__hamburger {
     display: flex;
   }
 
-  /* FIX 1: logo menor no mobile */
   .navbar__logo img {
     height: 48px;
     max-width: 140px;
@@ -1198,12 +1178,10 @@ a {
     font-size: 40px;
   }
 
-  /* FIX 2: padding-top do hero ajustado automaticamente via variável */
   .hero__content {
     padding-bottom: 40px;
   }
 
-  /* FIX 4: esconde o scroll indicator em mobile — não sobrepõe mais nada */
   .hero__scroll {
     display: none;
   }
@@ -1231,6 +1209,7 @@ a {
     height: 340px;
   }
 
+  /* ── FIX: badge não vaza mais no mobile ── */
   .sobre__image-badge {
     left: 0;
   }
@@ -1243,30 +1222,22 @@ a {
     grid-template-columns: 1fr;
   }
 
-  /* Mobile equipe: 1 card por linha */
+  /* Mobile equipe: 1 coluna */
   .equipe__grid {
-    display: grid;
     grid-template-columns: 1fr;
+    max-width: 320px;
     gap: 16px;
-  }
-
-  .equipe__grid .membro-card-link:nth-child(1),
-  .equipe__grid .membro-card-link:nth-child(2),
-  .equipe__grid .membro-card-link:nth-child(3),
-  .equipe__grid .membro-card-link:nth-child(4) {
-    grid-column: auto;
   }
 
   .localizacao__grid {
     grid-template-columns: 1fr;
-    direction: ltr;
   }
 
-  .localizacao__grid>*:first-child {
+  .localizacao__grid > *:first-child {
     order: 2;
   }
 
-  .localizacao__grid>*:last-child {
+  .localizacao__grid > *:last-child {
     order: 1;
   }
 
@@ -1303,8 +1274,6 @@ a {
 
 /* ── MOBILE PEQUENO: 480px ── */
 @media (max-width: 480px) {
-
-  /* FIX 1: logo ainda menor em telas muito pequenas */
   .navbar__logo img {
     height: 40px;
     max-width: 120px;
@@ -1320,6 +1289,7 @@ a {
 
   .equipe__grid {
     grid-template-columns: 1fr;
+    max-width: 100%;
     gap: 12px;
   }
 

@@ -13,24 +13,19 @@
   <meta name="theme-color" content="#FF5C00" />
   <link rel="shortcut icon" href="image/LOGO_MARCA_SANTA_ROSA_INSTA.png" type="image/x-icon">
 
-  <!-- PERFORMANCE: preconnect para fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <!-- PERFORMANCE: apenas os pesos usados + display=swap (elimina FOIT) -->
   <link
     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"
     rel="stylesheet" />
 
-  <!-- PERFORMANCE: Font Awesome carregado de forma não-bloqueante -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print"
     onload="this.media='all'" />
   <noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   </noscript>
 
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" /> -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" media="print" onload="this.media='all'" />
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -57,7 +52,6 @@
         </a>
       </div>
 
-      <!-- FIX: spans descomentados — sem eles o hambúrguer não aparece -->
       <button class="navbar__hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
         <span></span>
         <span></span>
@@ -84,15 +78,12 @@
     <!-- ═══════════ HERO ═══════════ -->
     <section class="hero" aria-label="Apresentação">
 
-      <!-- VIDEO BACKGROUND -->
       <div class="hero__video-wrap" aria-hidden="true">
-         <div class="hero__video-fallback"></div>
+        <div class="hero__video-fallback"></div>
         <video id="heroVideo" class="hero__video" src="movie/video_web.mp4" autoplay loop muted playsinline preload="metadata"
           fetchpriority="low">
-
         </video>
       </div>
-      <!-- /VIDEO BACKGROUND -->
 
       <div class="hero__overlay"></div>
       <div class="hero__noise"></div>
@@ -126,7 +117,7 @@
           </div>
 
           <div class="hero__stats">
-            <div class="hero__stat"><strong>4 barbeiros</strong>&nbsp;especializados</div>
+            <div class="hero__stat"><strong>3 barbeiros</strong>&nbsp;especializados</div>
             <div class="hero__stat-divider"></div>
             <div class="hero__stat"><strong>+5 anos</strong>&nbsp;de experiência</div>
             <div class="hero__stat-divider"></div>
@@ -135,7 +126,6 @@
         </div>
       </div>
 
-      <!-- FIX: oculto no mobile via CSS para não sobrepor os stats -->
       <div class="hero__scroll" aria-hidden="true">
         <span>Rolar</span>
         <i class="fas fa-chevron-down"></i>
@@ -149,7 +139,6 @@
         <div class="sobre__grid">
 
           <div class="sobre__image-wrap" data-aos="fade-right" data-aos-duration="700">
-            <!-- PERFORMANCE: lazy loading em imagem fora do viewport inicial -->
             <img src="image/Foto-barbeiro-gemini.png" alt="Interior da Santa Rosa Barbearia em Uberlândia"
               class="sobre__img" loading="lazy" onerror="this.style.background='#181818'" />
             <div class="sobre__image-accent" aria-hidden="true"></div>
@@ -301,48 +290,37 @@
 
         <div class="equipe__grid">
 
-          <a href="https://wa.me/5534998959585?text=Ol%C3%A1%2C%20vim%20pelo%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20marcar%20um%20hor%C3%A1rio%20com%20o%20barbeiro%20Luiz." target="_blank" rel="noopener" class="membro-card-link" data-aos="fade-up" data-aos-delay="0">
-          <article class="membro-card">
-            <div class="membro-card__foto-wrap">
-              <img src="image/colaboradores/luiz.jpg" alt="Luiz, barbeiro especialista da Santa Rosa Barbearia"
-                class="membro-card__foto" loading="lazy" onerror="this.src='';this.style.background='#2a2a2a'" />
-            </div>
-            <div class="membro-card__nome">Luiz</div>
-            <div class="membro-card__cargo">Barbeiro Especialista</div>
-          </article>
+          <a href="https://wa.me/5534998959585?text=Ol%C3%A1%2C%20vim%20pelo%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20marcar%20um%20hor%C3%A1rio%20com%20o%20barbeiro%20Jo%C3%A3o%20Fillipe." target="_blank" rel="noopener" class="membro-card-link" data-aos="fade-up" data-aos-delay="0">
+            <article class="membro-card">
+              <div class="membro-card__foto-wrap">
+                <img src="image/colaboradores/joao.jpg" alt="João Fillipe, barbeiro especialista da Santa Rosa Barbearia"
+                  class="membro-card__foto" loading="lazy" onerror="this.src='';this.style.background='#2a2a2a'" />
+              </div>
+              <div class="membro-card__nome">João Fillipe</div>
+              <div class="membro-card__cargo">Barbeiro Especialista</div>
+            </article>
           </a>
 
-          <a href="https://wa.me/5534998959585?text=Ol%C3%A1%2C%20vim%20pelo%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20marcar%20um%20hor%C3%A1rio%20com%20o%20barbeiro%20Jo%C3%A3o%20Fillipe." target="_blank" rel="noopener" class="membro-card-link" data-aos="fade-up" data-aos-delay="160">
-          <article class="membro-card">
-            <div class="membro-card__foto-wrap">
-              <img src="image/colaboradores/joao.jpg" alt="João Fillipe, barbeiro especialista da Santa Rosa Barbearia"
-                class="membro-card__foto" loading="lazy" onerror="this.src='';this.style.background='#2a2a2a'" />
-            </div>
-            <div class="membro-card__nome">João Fillipe</div>
-            <div class="membro-card__cargo">Barbeiro Especialista</div>
-          </article>
+          <a href="https://wa.me/5534998959585?text=Ol%C3%A1%2C%20vim%20pelo%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20marcar%20um%20hor%C3%A1rio%20com%20o%20barbeiro%20Roberto." target="_blank" rel="noopener" class="membro-card-link" data-aos="fade-up" data-aos-delay="80">
+            <article class="membro-card">
+              <div class="membro-card__foto-wrap">
+                <img src="image/colaboradores/roberto.jpg" alt="Roberto, barbeiro especialista da Santa Rosa Barbearia"
+                  class="membro-card__foto" loading="lazy" onerror="this.src='';this.style.background='#2a2a2a'" />
+              </div>
+              <div class="membro-card__nome">Roberto</div>
+              <div class="membro-card__cargo">Barbeiro Especialista</div>
+            </article>
           </a>
 
-          <a href="https://wa.me/5534998959585?text=Ol%C3%A1%2C%20vim%20pelo%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20marcar%20um%20hor%C3%A1rio%20com%20o%20barbeiro%20Roberto." target="_blank" rel="noopener" class="membro-card-link" data-aos="fade-up" data-aos-delay="240">
-          <article class="membro-card">
-            <div class="membro-card__foto-wrap">
-              <img src="image/colaboradores/roberto.jpg" alt="Roberto, barbeiro especialista da Santa Rosa Barbearia"
-                class="membro-card__foto" loading="lazy" onerror="this.src='';this.style.background='#2a2a2a'" />
-            </div>
-            <div class="membro-card__nome">Roberto</div>
-            <div class="membro-card__cargo">Barbeiro Especialista</div>
-          </article>
-          </a>
-
-          <a href="https://wa.me/5534998959585?text=Ol%C3%A1%2C%20vim%20pelo%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20marcar%20um%20hor%C3%A1rio%20com%20o%20barbeiro%20Lamarque." target="_blank" rel="noopener" class="membro-card-link" data-aos="fade-up" data-aos-delay="320">
-          <article class="membro-card">
-            <div class="membro-card__foto-wrap">
-              <img src="image/colaboradores/julio2.jpg" alt="Lamarque, barbeiro especialista da Santa Rosa Barbearia"
-                class="membro-card__foto" loading="lazy" onerror="this.src='';this.style.background='#2a2a2a'" />
-            </div>
-            <div class="membro-card__nome">Lamarque</div>
-            <div class="membro-card__cargo">Barbeiro Especialista</div>
-          </article>
+          <a href="https://wa.me/5534998959585?text=Ol%C3%A1%2C%20vim%20pelo%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20marcar%20um%20hor%C3%A1rio%20com%20o%20barbeiro%20Lamarque." target="_blank" rel="noopener" class="membro-card-link" data-aos="fade-up" data-aos-delay="160">
+            <article class="membro-card">
+              <div class="membro-card__foto-wrap">
+                <img src="image/colaboradores/julio2.jpg" alt="Lamarque, barbeiro especialista da Santa Rosa Barbearia"
+                  class="membro-card__foto" loading="lazy" onerror="this.src='';this.style.background='#2a2a2a'" />
+              </div>
+              <div class="membro-card__nome">Lamarque</div>
+              <div class="membro-card__cargo">Barbeiro Especialista</div>
+            </article>
           </a>
 
         </div>
